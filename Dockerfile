@@ -1,7 +1,7 @@
 ARG METABASE_VERSION
 
 FROM metabase/metabase:${METABASE_VERSION} as metabase
-FROM eclipse-temurin:21
+FROM eclipse-temurin:11
 
 COPY --from=metabase /app /app
 

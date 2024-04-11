@@ -3,6 +3,12 @@
   "extends": [
     "config:recommended"
   ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["eclipse-temurin"],
+      "enabled": false
+    }
+  ],
   "customManagers": [
     {
       "customType": "regex",
