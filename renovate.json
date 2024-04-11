@@ -12,7 +12,7 @@
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "metabase/metabase",
       "matchStrings": [
-        "METABASE_VERSION: (?<currentValue>v\\d{1,2}\\.\\d{1,2}\\.\\d{1,2})"
+        "METABASE_VERSION: (?<currentValue>v0\\.\\d{1,2}\\.\\d{1,2})"
       ]
     }
   ]
