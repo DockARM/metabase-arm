@@ -2,6 +2,8 @@ name: Build docker image
 
 on:
   push:
+    branches:
+      - main
 
 env:
   METABASE_VERSION: v0.49.0
@@ -19,6 +21,10 @@ jobs:
         with:
           platforms: arm64
 
+      - name: Downcase repo name
+        run: |
+          echo "REPO=${GITHUB_REPOSITORY@L}" >> "${GITHUB_ENV}"
+
       - name: Push Docker Image
         uses: docker/build-push-action@v5.3.0
         with:
@@ -28,4 +34,4 @@ jobs:
           build-args: |
             METABASE_VERSION=${{ env.METABASE_VERSION }}
           tags: |
-            ghcr.io/${{ github.repository }}:${{ env.METABASE_VERSION }}
+            ghcr.io/${{ env.REPO }}:${{ env.METABASE_VERSION }}
