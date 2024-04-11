@@ -7,6 +7,10 @@
     {
       "matchPackageNames": ["eclipse-temurin"],
       "enabled": false
+    },
+    {
+      "matchPackageNames": ["metabase/metabase"],
+      "matchUpdateTypes": ["minor", "patch"]
     }
   ],
   "customManagers": [
