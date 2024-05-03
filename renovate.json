@@ -10,7 +10,8 @@
     },
     {
       "matchPackageNames": ["metabase/metabase"],
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
     }
   ],
   "customManagers": [
