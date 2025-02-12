@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  METABASE_VERSION: v0.53.1
+  METABASE_VERSION: v0.53.2
 
 jobs:
   test:
